@@ -19,32 +19,37 @@ window.addEventListener("load", () => {
     "rgba(255, 197, 239)",
     */
   ];
-  
+  var numBubbles = 0;
+
   //make sounds work
-  pads.forEach((pad, index) =>{
-    pad.addEventListener("click", function(){ //use normal function to use "this" to refer to parent pad
+  pads.forEach((pad, index) => {
+    pad.addEventListener("click", function () {
+      //use normal function to use "this" to refer to parent pad
       this.querySelector("audio").currentTime = 0;
       this.querySelector("audio").play();
-      
+
       createBubbles(index);
       body.style.background = "linear-gradient(180deg, #F6F6F6, #232323";
       body.style.color = "#232323";
+      body.style.textShadow = "4px 4px 5px"+colors[index];
     });
   });
-  
+
   //create a function to make bubbles
   const createBubbles = (index) => {
     var bubble = document.createElement("div");
     visual.appendChild(bubble);
     bubble.style.backgroundColor = colors[index];
     bubble.style.animation = "jump 1s ease";
-    bubble.addEventListener("animationend", function(){
+    numBubbles += 1;
+    bubble.addEventListener("animationend", function () {
       visual.removeChild(this);
-      body.style.backgroundColor = "#232323";
-      body.style.color = "#F6F6F6";
-     
+      numBubbles -= 1;
+      if (numBubbles == 0) {
+        body.style.background = "#232323";
+        body.style.color = "#F6F6F6";
+        body.style.textShadow = "0px 0px 0px white"
+      }
     });
-  }
-  
-  
+  };
 });
