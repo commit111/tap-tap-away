@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Staatliches', sans-serif;
+}
+.app{
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1{
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  font-size: 40px;
+}
+header p{
+  font-size: 20px;
+}
+.pads{
+  background: lightblue;
+  width: 100%;
+}
+.pads > div{
+  height: 100px;
+  width: 100px;
+}
+.pad1{
+  background: rgba();
+}
+.pad2{
+  background: rgba();
+}
+.pad3{
+  background: rgba();
+}
+.pad4{
+  background: rgba();
+}
+.pad5{
+  background: rgba();
+}
+.pad6{
+  background: rgba();
+}
