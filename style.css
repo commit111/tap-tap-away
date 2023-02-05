@@ -22,26 +22,28 @@ header p{
 .pads{
   background: lightblue;
   width: 100%;
+  display: flex;
 }
 .pads > div{
   height: 100px;
   width: 100px;
+  flex: 1;
 }
 .pad1{
-  background: rgba();
+  background: rgba(253,239,253);
 }
 .pad2{
-  background: rgba();
+  background: rgba(200,243,246);
 }
 .pad3{
-  background: rgba();
+  background: rgba(255,255,197);
 }
 .pad4{
-  background: rgba();
+  background: rgba(255,220,220);
 }
 .pad5{
-  background: rgba();
+  background: rgba(219,209,255);
 }
 .pad6{
-  background: rgba();
+  background: rgba(255,197,239);
 }
