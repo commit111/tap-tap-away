@@ -3,7 +3,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Staatliches", sans-serif;
-  background: #F6F6F6;
+  background: #F6F6F6; /*#F6F6F6*/
+  color: #232323; /*#232323*/
 }
 .app {
   height: 100vh;
@@ -15,10 +16,10 @@ body {
 header h1 {
   margin: 50px 0px 30px 0px;
   text-align: center;
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 header p {
-  font-size: 2px;
+  font-size: 1.25rem;
 }
 .pads {
   background: lightblue;
