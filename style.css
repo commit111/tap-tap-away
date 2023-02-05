@@ -3,7 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Staatliches", sans-serif;
-  background: rgba(255, 245, 238);
+  background: #F6F6F6;
 }
 .app {
   height: 100vh;
@@ -18,7 +18,7 @@ header h1 {
   font-size: 40px;
 }
 header p {
-  font-size: 20px;
+  font-size: 2px;
 }
 .pads {
   background: lightblue;
@@ -31,7 +31,7 @@ header p {
   flex: 1;
 }
 .pad1 {
-  background: rgba(253, 239, 253);
+  background: rgba(174, 231, 255);
 }
 .pad2 {
   background: rgba(200, 243, 246);
@@ -68,4 +68,5 @@ header p {
   width: 50px;
   border-radius: 50%;
   bottom: 0%;
+  z-index: -1;
 }
