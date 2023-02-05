@@ -2,6 +2,7 @@ window.addEventListener("load", () => {
   const sounds = document.querySelectorAll(".sound");
   const pads = document.querySelectorAll(".pads div");
   const visual = document.querySelector(".visual");
+  const body = document.querySelector("body");
   const colors = [
     "#AEE8FF",
     "#C8F3F6",
@@ -26,6 +27,8 @@ window.addEventListener("load", () => {
       this.querySelector("audio").play();
       
       createBubbles(index);
+      body.style.background = "linear-gradient(180deg, #F6F6F6, #232323";
+      body.style.color = "#232323";
     });
   });
   
@@ -37,6 +40,9 @@ window.addEventListener("load", () => {
     bubble.style.animation = "jump 1s ease";
     bubble.addEventListener("animationend", function(){
       visual.removeChild(this);
+      body.style.backgroundColor = "#232323";
+      body.style.color = "#F6F6F6";
+     
     });
   }
   
