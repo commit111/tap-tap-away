@@ -3,25 +3,38 @@ window.addEventListener("load", () => {
   const pads = document.querySelectorAll(".pads div");
   const visual = document.querySelectorAll(".visual");
   const colors = [
+    "#FDEFFD",
+    "#C8F3F6",
+    "#FFFFC5",
+    "#FFDCDC",
+    "#DBD1FF",
+    "#FFC5EF",
+    /*
     "rgba(253, 239, 253)",
     "rgba(200, 243, 246)",
     "rgba(255, 255, 197)",
     "rgba(255, 220, 220)",
     "rgba(219, 209, 255)",
     "rgba(255, 197, 239)",
+    */
   ];
   
   //make sounds work
-  pads.forEach(pad =>{
+  pads.forEach((pad, index) =>{
     pad.addEventListener("click", function(){ //use normal function to use "this" to refer to parent pad
       this.querySelector("audio").currentTime = 0;
       this.querySelector("audio").play();
+      
+      createBubbles(index);
     });
   });
   
   //create a function to make bubbles
-  const createBubbles = () => {
-    const bubble = document.create
+  const createBubbles = (index) => {
+    const bubble = document.createElement("div");
+    visual.appendChild(bubble);
+    bubble.style.backgroundColor = colors[index];
+    bubble.style.animation = "jump 1s ease";
   }
   
   
