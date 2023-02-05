@@ -29,9 +29,10 @@ window.addEventListener("load", () => {
       this.querySelector("audio").play();
 
       createBubbles(index);
-      body.style.background = "linear-gradient(180deg, #F6F6F6, #232323";
+
+      body.style.background = "linear-gradient(180deg, #F6F6F6,"+ colors[index]+")";
       body.style.color = "#232323";
-      body.style.textShadow = "4px 4px 5px"+colors[index];
+      //body.style.textShadow = "2px 2px 7px" + colors[index];
     });
   });
 
@@ -39,7 +40,7 @@ window.addEventListener("load", () => {
   const createBubbles = (index) => {
     var bubble = document.createElement("div");
     visual.appendChild(bubble);
-    bubble.style.backgroundColor = colors[index];
+    bubble.style.backgroundColor = "#232323"; //was colors[index]
     bubble.style.animation = "jump 1s ease";
     numBubbles += 1;
     bubble.addEventListener("animationend", function () {
@@ -48,7 +49,7 @@ window.addEventListener("load", () => {
       if (numBubbles == 0) {
         body.style.background = "#232323";
         body.style.color = "#F6F6F6";
-        body.style.textShadow = "0px 0px 0px white"
+        //body.style.textShadow = "0px 0px 0px white";
       }
     });
   };
